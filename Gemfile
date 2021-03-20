@@ -28,6 +28,12 @@ group :development, :test do
 
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-i18n', require: false
 end
 
 group :development do
@@ -45,8 +51,10 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'faker'
+  gem 'fuubar'
   gem 'launchy'
   gem 'selenium-webdriver', require: false
+  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
