@@ -35,6 +35,9 @@ module Base
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    config.i18n.available_locales = [:en, :ru]
+    config.i18n.default_locale = :en
+
     config.generators do |g|
       g.test_framework :rspec,
                        view_specs: false,
