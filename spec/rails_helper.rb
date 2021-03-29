@@ -61,6 +61,10 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # Get rid of I18n . so you can use t(...) just like in views:
+  # config.include AbstractController::Translation
+  config.include ActionView::Helpers::TranslationHelper
 end
 
 Shoulda::Matchers.configure do |config|

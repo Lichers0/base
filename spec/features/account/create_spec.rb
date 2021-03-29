@@ -1,17 +1,27 @@
 require 'rails_helper'
 
-feature 'Create account when user is created' do
-  scenario 'show account list when user is created' do
-    visit new_user_registration_path
-    fill_in t 'email', with: 'test@gmail.com'
-    fill_in t 'password', with: '12345678'
-    fill_in t 'password_confirmation', with: '12345678'
+RSpec.feature 'Create account when user is created' do
+  context 'when user is created' do
+    scenario 'show account list when user is created' do
+      sign_up 'test@gmail.com', '12343456'
 
-    click_on 'signup'
-    visit accounts_path
+      visit accounts_path
 
-    within '.accounts' do
-      expect(page).to have_content t 'default_account_name'
+      within '.accounts' do
+        save_and_open_page
+        expect(page).to have_content t('default_account_name')
+      end
     end
+  end
+
+  private
+
+  def sign_up(email, password)
+    visit new_user_registration_path
+    fill_in 'user_email', with: email
+    fill_in 'user_password', with: password
+    fill_in 'user_password_confirmation', with: password
+
+    click_on t 'devise.registrations.new.sign_up'
   end
 end

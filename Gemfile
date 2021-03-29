@@ -33,10 +33,13 @@ group :development, :test do
   gem 'rspec-rails'
 
   gem 'rubocop', require: false
+  gem 'rubocop-i18n', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
-  gem 'rubocop-i18n', require: false
+
+  # gem 'pry-debug'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -45,9 +48,11 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'listen', '~> 3.3'
-  gem 'rack-mini-profiler', '~> 2.0'
+  # gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'i18n-debug'
 end
 
 group :test do
