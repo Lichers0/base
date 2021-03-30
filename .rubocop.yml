@@ -3,3 +3,19 @@ require:
   - rubocop-rspec
   - rubocop-performance
   - rubocop-i18n
+
+RSpec/Capybara/FeatureMethods:
+  Exclude:
+    - 'spec/features/**/*'
+
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/features/**/*'
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/features/**/*'
+
+# RequireNotFound:
+#   Exclude:
+#     - 'spec/**/*'

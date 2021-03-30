@@ -1,0 +1,7 @@
+.error-supplier
+  = render 'shared/errors', resource: @supplier
+
+= form_for @supplier do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit t('.save')

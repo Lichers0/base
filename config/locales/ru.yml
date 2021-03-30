@@ -1,2 +1,18 @@
 ru:
+  activerecord:
+    attributes:
+      supplier:
+        name: 'Наименование'
   default_account_name: 'Аккаунт'
+  suppliers:
+    index:
+      add: 'Создать поставщика'
+    create:
+      successfully_created: 'Успешно создан'
+    update:
+      successfully_saved: 'Успешно сохранен'
+    supplier:
+      delete: 'Удалить'
+      edit: 'Редактировать'
+    form:
+      save: 'Записать'
