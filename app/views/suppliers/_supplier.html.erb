@@ -1,0 +1,16 @@
+<tr class="bg-white" x-description="Odd row">
+  <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
+    <%= supplier.name %>
+  </td>
+  <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+    <%= link_to t('.edit'),
+      edit_supplier_path(supplier),
+      class: "text-indigo-600 hover:text-indigo-900 px-2"
+    %>
+  <%= link_to t('.delete'),
+    supplier_path(supplier),
+    method: :delete,
+    class: "text-indigo-600 hover:text-indigo-900"
+  %>
+  </td>
+</tr>
