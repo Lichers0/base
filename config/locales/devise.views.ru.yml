@@ -117,6 +117,8 @@ ru:
       already_signed_out: Выход из системы уже выполнен.
       new:
         sign_in: Войти
+      destroy:
+        sign_out: Выйти
       signed_in: Вход в систему выполнен.
       signed_out: Выход из системы выполнен.
     shared:

@@ -10,7 +10,7 @@ feature 'authenticate user can create supplier' do
 
     scenario 'creates supplier' do
       visit suppliers_path
-      click_on t 'suppliers.index.add'
+      first('form').click_on t 'suppliers.index.add'
 
       fill_in 'supplier_name', with: 'Test LLC'
       click_on t 'suppliers.form.save'

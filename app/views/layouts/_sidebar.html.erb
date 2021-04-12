@@ -165,11 +165,13 @@
             </nav>
           </div>
           <div class="flex flex-shrink-0 p-4 bg-gray-700">
-            <a href="#" class="flex-shrink-0 block w-full group">
+            <%# <a href="#" class="flex-shrink-0 block w-full group"> %>
               <div class="flex items-center">
-                <div>
-                  <img class="inline-block rounded-full h-9 w-9" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="">
-                </div>
+                <span class="inline-block w-12 h-12 overflow-hidden bg-gray-100 rounded-full">
+                  <svg class="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                  </svg>
+                </span>
                 <div class="ml-3">
                   <p class="text-sm font-medium text-white">
                     User
@@ -177,9 +179,14 @@
                   <p class="text-xs font-medium text-gray-300 group-hover:text-gray-200">
                     View profile
                   </p>
+                    <%= link_to t('devise.sessions.destroy.sign_out'),
+                      destroy_user_session_path,
+                      method: :delete,
+                      class: "text-xs font-medium text-gray-300 hover:text-gray-200"
+                    %>
                 </div>
               </div>
-            </a>
+            <%# </a> %>
           </div>
         </div>
       </div>
@@ -195,9 +202,6 @@
       </div>
       <main class="relative z-0 flex-1 overflow-y-auto focus:outline-none" tabindex="0" x-data="" x-init="$el.focus()">
         <div class="py-6">
-          <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
-          </div>
           <div class="px-4 mx-auto max-w-7xl>
             <!-- Replace with your content -->
             <div class="py-4">
